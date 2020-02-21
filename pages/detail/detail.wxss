@@ -1,0 +1,53 @@
+/* pages/detail/detail.wxss */
+.title{
+  display: block;
+  text-align: center;
+  font-size: 50rpx;
+  font-weight: 500;
+  margin: 10rpx 0;
+}
+.scroll-view{
+  width: 100%;
+}
+swiper{
+  width: 96%;
+  height: 490rpx;
+  margin: 10rpx 16rpx;
+}
+swiper video,image{
+  width: 100%;
+  border-radius: 16rpx;
+}
+.info{
+  width: 96%;
+  margin: 0 auto;
+  border-radius: 16rpx;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  background-color:rgb(250, 105, 226)
+}
+.info text{
+  font-size: 40rpx;
+  color: #fff;
+  line-height: 80rpx;
+}
+.detail-tu{
+  width: 96%;
+  margin: 0 auto;
+  margin-bottom: 100rpx;
+}
+.bottom{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  bottom: 0;
+  background-color:rgb(250, 105, 226)
+}
+button{
+  width: 50%;
+  border: 0;
+  color:#fff;
+   background-color:rgb(250, 105, 226)
+}

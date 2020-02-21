@@ -1,0 +1,27 @@
+<!-- <text class="title">产品详情</text> -->
+<scroll-view scroll-y>
+  <swiper indicator-dots="ture" indicator-active-color="#ef9ba8">
+    <swiper-item>
+      <video src="{{video}}" controls="true"></video>
+    </swiper-item>
+    <swiper-item wx:for="{{image}}">
+      <image src="{{item}}" mode="widthFix"></image>
+    </swiper-item>
+  </swiper>
+
+  <view class="info">
+    <text class="name">华为p30</text>
+    <text class="price">￥998元</text>
+  </view>
+
+
+  <text class="title">产品介绍</text>
+  <view class="detail-tu" wx:for="{{detail}}">
+    <image src="{{item}}" mode="widthFix"></image>
+  </view>
+
+</scroll-view>
+<view class="bottom">
+  <button class="tian">添加到购物车</button>
+  <button class="mai">立即购买</button>
+</view>
