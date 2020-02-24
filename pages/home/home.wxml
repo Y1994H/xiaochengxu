@@ -1,3 +1,44 @@
 <!--pages/home/home.wxml-->
-<text class="tit">hollt world</text>
-<button>nihoa</button>
+<view class="container">
+  <!-- 首页轮播图 -->
+  <swiper autoplay="true" circular="ture" indicator-dots="ture" indicator-active-color="#ef9ba8">
+    <swiper-item wx:for="{{image}}" wx:key="this">
+      <image src="{{item}}" mode="widthFix"></image>
+    </swiper-item>
+  </swiper>
+
+  <!-- 导航菜单 -->
+  <view class="nav">
+    <view class="menu" wx:for="{{navList}}" wx:key="{{index}}">
+      <image src="{{item.src}}"></image>
+      <text>{{item.title}}</text>
+    </view>
+  </view>
+
+  <!-- 产品列表 -->
+  <text class="hot">热卖产品</text>
+  <view class="wrap">
+    <navigator url="/pages/detail/detail?id={{item.id}}" class="product" wx:for="{{productList}}" wx:key="{{index}}">
+      <image src="{{item.src}}" mode="widthFix"></image>
+      <view class="info">
+        <text class="name">{{item.name}}</text>
+        <text class="price">{{item.price}}</text>
+      </view>
+    </navigator>
+  </view>
+  <!-- Tap切换 -->
+  <view class="nav_title">
+    <view class="nav_tab">
+      <view wx:for="{{list}}" class="{{selected==index?'hidden':'show'}}" wx:key="this" data-index='{{index}}' bindtap="selected">
+        {{item}}
+        <view class="{{selected==index?'nav_underline':''}}"></view>
+      </view>
+    </view>
+
+    <!-- tab框显示内容 -->
+    <view wx:if="{{selected == 0}}">aaa</view>
+    <view wx:if="{{selected == 1}}">bbb</view>
+    <view wx:if="{{selected == 2}}">ccc</view>
+    <view wx:if="{{selected == 3}}">ddd</view>
+  </view>
+</view>

@@ -1,6 +1,8 @@
 // pages/detail/detail.js
+const app = getApp();
+const arr = app.arr;
 Page({
-
+ 
   /**
    * 页面的初始数据
    */
@@ -17,12 +19,25 @@ Page({
       "/images/detail03.png"
     ],
   },
-
+  // 添加购物车的
+  addCar(e){
+ 
+    //将数据存储到本地的同步方法
+    arr.push(e.currentTarget.dataset.id);
+    wx.setStorageSync("arr", arr);
+  //  wx.setStorageSync("id", this.data.productId);
+   wx.showModal({
+     title: '购物车提示',
+     content: '产品添加到购物车成功',
+   })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(options)
+    this.setData({
+      productId:options.id,
+    })
   },
 
   /**

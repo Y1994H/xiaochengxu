@@ -22,6 +22,6 @@
 
 </scroll-view>
 <view class="bottom">
-  <button class="tian">添加到购物车</button>
-  <button class="mai">立即购买</button>
+  <button data-id="{{item.id}}" class="tian" bindtap="addCar">添加到购物车</button>
+  <button class="mai" bindtap="buy">立即购买</button>
 </view>

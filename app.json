@@ -1,6 +1,48 @@
 {
   "pages": [
     "pages/home/home",
-    "pages/about/about"
-  ]
+    "pages/about/about",
+    "pages/profile/profile",
+    "pages/category/category",
+    "pages/login/login",
+    "pages/detail/detail"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#ef9ba8",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "我的小程序",
+    "backgroundColor": "#eeeeee",
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "selectedColor": "#1296db",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "assels/tabbar/home.png",
+        "selectedIconPath": "assels/tabbar/homea.png"
+      },
+      {
+        "pagePath": "pages/category/category",
+        "text": "分类",
+        "iconPath": "assels/tabbar/gywm.png",
+        "selectedIconPath": "assels/tabbar/gywma.png"
+      },
+      {
+        "pagePath": "pages/profile/profile",
+        "text": "购物车",
+        "iconPath": "assels/tabbar/home.png",
+        "selectedIconPath": "assels/tabbar/homea.png"
+      },
+      {
+        "pagePath": "pages/login/login",
+        "text": "我的",
+        "iconPath": "assels/tabbar/gywm.png",
+        "selectedIconPath": "assels/tabbar/gywma.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap40.json"
 }

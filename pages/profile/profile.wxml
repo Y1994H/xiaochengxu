@@ -1,2 +1,21 @@
-<!--pages/profile/profile.wxml-->
-<text>pages/profile/profile.wxml</text>
+<scroll-view scroll-y>
+<view class="wrap">
+  <view class="product" wx:for="{{productList}}" wx:key="{{index}}">
+    <image src="{{item.src}}" mode="widthFix"></image>
+    <view class="info">
+      <text>{{item.name}}</text>
+      <text class="price">{{item.price}}</text>
+    </view>
+    <checkbox-group id="{{item.id}}" bindchange="shangeboxChange">
+      <checkbox value="{{item.id}}"></checkbox>
+    </checkbox-group>
+  </view>
+  </view>
+</scroll-view>
+
+<view class="bottom">
+  <button>
+    去付款
+    <text>￥{{price}}</text>
+  </button>
+</view>
